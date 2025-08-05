@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Syntotech | Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+
+  <!-- GSAP + ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <style>
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .contact-info,
+    .contact-form {
+      flex: 1 1 320px;
+      background: var(--card-bg, #fff);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+      margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+      color: var(--subtext);
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    [data-theme="dark"] .contact-form input,
+    [data-theme="dark"] .contact-form textarea {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      border: 1px solid #444;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-form button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #0b5ed7;
+    }
+
+    .dark-mode .contact-info h3,
+    .dark-mode .contact-form h3 {
+      color: var(--text-dark);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+  <a href="index.html">
+    <img src="assets/logo.png" alt="Syntotech Logo">
+  </a>
+</div>
+
+    <span class="hamburger" onclick="toggleMenu()">☰</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <span class="toggle-theme" onclick="toggleTheme()" id="theme-icon">💡</span>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero fade-up">
+    <h1>Contact Us</h1>
+    <p>Let’s build something powerful together. Reach out now.</p>
+  </section>
+
+  <!-- Contact Grid -->
+  <section class="section fade-up">
+    <div class="contact-grid">
+      <div class="contact-info fade-up">
+        <h3>Get in Touch</h3>
+        <p>📧 Email: hello@syntotech.com</p>
+        <p>📞 Phone: +61 412 252 907</p>
+        <p>📍 Location: Melbourne, VIC, Australia</p>
+      </div>
+
+      <div class="contact-form fade-up">
+        <h3>Send a Message</h3>
+        <form action="https://formspree.io/f/meozkvkr" method="POST" id="contact-form">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+          <p id="form-status" style="display:none; color: green; font-weight: bold; margin-top: 10px;">✅ Message sent successfully!</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section fade-up">
+    <h2>Frequently Asked Questions</h2>
+    <div class="card">
+      <h3>How soon will I get a reply?</h3>
+      <p>We usually respond within 24 hours during business days.</p>
+    </div>
+    <div class="card">
+      <h3>Can I schedule a live consultation?</h3>
+      <p>Absolutely. Just mention your availability in your message.</p>
+    </div>
+  </section>
+
+  <!-- Pre-Contact Notes -->
+<section class="section fade-up">
+  <h2>Before You Contact Us</h2>
+
+  <div class="card">
+    <h3>Double-check your email</h3>
+    <p>Please make sure your email address is correct so we can get back to you.</p>
+  </div>
+
+  <div class="card">
+    <h3>Be Specific</h3>
+    <p>The more details you provide about your request, the better we can help you.</p>
+  </div>
+
+  <div class="card">
+    <h3>Urgent Requests</h3>
+    <p>For time-sensitive matters, please contact us directly by phone.</p>
+  </div>
+</section>
+
+
+  <!-- Bonus Info Section -->
+  <section class="section fade-up">
+    <h2>Additional Info</h2>
+    <div class="card">
+      <h3>Working Hours</h3>
+      <p>Monday - Friday: 9:00 AM to 6:00 PM</p>
+    </div>
+    <div class="card">
+      <h3>Expected Response Time</h3>
+      <p>Within 24 hours during business days.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SyntoTech. All rights reserved.</p>
+  </footer>
+</body>
+</html>
