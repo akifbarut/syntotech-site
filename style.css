@@ -370,6 +370,24 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .blog-cards .card {
+    position: relative;
+    cursor: pointer;
+  }
+  .blog-cards .card .btn {
+    position: static;
+  }
+  .blog-cards .card .btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: 1;
+  }
+  .blog-cards .card:active {
+    transform: translateY(-2px);
+  }
 }
 
 
